@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a2332;
+  --bg-tertiary: #243447;
+  --text-primary: #ffffff;
+  --text-secondary: #b8c5d1;
+  --text-accent: #4fc3f7;
+  --border-color: #2c3e50;
+  --shadow-color: rgba(79, 195, 247, 0.15);
+  --color-pink: #e0398b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-family-montserrat: var(--font-montserrat), sans-serif;
+  --font-family-sans: var(--font-montserrat), sans-serif;
+  --color-pink: var(--pink);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar for navy blue theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #29b6f6;
+}
+
+#hero-particles {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+section:not(.hero-section) {
+  position: relative;
+  z-index: 10;
+}
+
+/* globals.css */
+.button-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, transparent 70%);
+  transform: translateX(-100%) rotate(25deg);
+  transition: transform 0.8s ease;
+}
+
+.button-glow:hover::before {
+  transform: translateX(100%) rotate(25deg);
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(59,130,246,0.5); }
+  50% { box-shadow: 0 0 25px rgba(59,130,246,0.8); }
+}
+
+.button-water {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+
+@keyframes metaFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.meta-icon-animated {
+  animation: metaGlow 2s ease-in-out infinite, metaFloat 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.meta-icon-animated:hover {
+  animation: none;
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 1));
+  transform: scale(1.1) rotate(360deg);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ebb56c, #ce2e90, #8740fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  font-weight: bold;
+}
+
+.hero-section {
+  position: relative;
+  background-color: #0f1419; 
+  background-image: url('/images/codeBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,  
+    rgba(0, 0, 0, 0.8) 100% 
+  );
+  z-index: 1;
+  pointer-events: none;
+  min-height: 100vh; 
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #4e33e1, #e6767b);
 }
