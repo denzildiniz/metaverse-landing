@@ -20,8 +20,6 @@
   --color-offBlack: var(--offBlack);
 }
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -252,5 +250,280 @@ section:not(.hero-section) {
 @media screen and (max-width: 720px) {
   .custom-moon-image{
     top: 136px;
+  }
+}
+
+.animated-metalCircel-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.animated-metalItem {
+  position: absolute;
+  animation: moonFloatUp 16s ease-in-out infinite;
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+@keyframes moonFloatUp {
+  0% {
+    transform: translateY(100vh) translateX(20vw);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(35vw);
+    opacity: 0;
+  }
+}
+
+.animated-metalItem-2 {
+  position: absolute;
+  animation: metalFloat2 18s ease-in-out infinite;
+  filter: blur(0.5px);
+  opacity: 0.7;
+}
+
+.animated-metalItem-3 {
+  position: absolute;
+  animation: metalFloat3 25s ease-in-out infinite;
+  filter: blur(1.5px);
+  opacity: 0.6;
+}
+
+.animated-metalItem-4 {
+  position: absolute;
+  animation: metalFloat4 20s ease-in-out infinite;
+  filter: blur(0.8px);
+  opacity: 0.8;
+}
+
+@keyframes metalFloat2 {
+  0% {
+    transform: translateY(100vh) translateX(45vw);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-45vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat3 {
+  0% {
+    transform: translateY(100vh) translateX(10vw);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(120vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat4 {
+  0% {
+    transform: translateY(100vh) translateX(150vw);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-50vw);
+    opacity: 0;
+  }
+}
+
+.animated-metalItem-5 {
+  position: absolute;
+  animation: metalFloat5 18s ease-in-out infinite;
+  filter: blur(0.3px);
+  opacity: 0.9;
+}
+
+.animated-metalItem-6 {
+  position: absolute;
+  animation: metalFloat6 20s ease-in-out infinite;
+  filter: blur(0.2px);
+  opacity: 0.85;
+}
+
+@keyframes metalFloat5 {
+  0% {
+    transform: translateY(100vh) translateX(120vw);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(80vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat6 {
+  0% {
+    transform: translateY(100vh) translateX(-70vw);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(70vw);
+    opacity: 0;
+  }
+}
+
+.animated-metalItem-7 {
+  position: absolute;
+  animation: metalFloat7 22s ease-in-out infinite;
+  filter: blur(0.4px);
+  opacity: 0.8;
+}
+
+.animated-metalItem-8 {
+  position: absolute;
+  animation: metalFloat8 25s ease-in-out infinite;
+  filter: blur(0.6px);
+  opacity: 0.75;
+}
+
+.animated-metalItem-9 {
+  position: absolute;
+  animation: metalFloat9 28s ease-in-out infinite;
+  filter: blur(0.3px);
+  opacity: 0.85;
+}
+
+.animated-metalItem-10 {
+  position: absolute;
+  animation: metalFloat10 30s ease-in-out infinite;
+  filter: blur(0.2px);
+  opacity: 0.9;
+}
+
+.animated-metalItem-11 {
+  position: absolute;
+  animation: metalFloat11 26s ease-in-out infinite;
+  filter: blur(0.5px);
+  opacity: 0.8;
+}
+
+@keyframes metalFloat7 {
+  0% {
+    transform: translateY(100vh) translateX(40vw);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(40vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat8 {
+  0% {
+    transform: translateY(100vh) translateX(90vw);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(90vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat9 {
+  0% {
+    transform: translateY(100vh) translateX6(0vw);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(60vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat10 {
+  0% {
+    transform: translateY(100vh) translateX(40vw);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(40vw);
+    opacity: 0;
+  }
+}
+
+@keyframes metalFloat11 {
+  0% {
+    transform: translateY(100vh) translateX(75vw);
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(75vw);
+    opacity: 0;
   }
 }
