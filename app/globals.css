@@ -10,12 +10,14 @@
   --border-color: #2c3e50;
   --shadow-color: rgba(79, 195, 247, 0.15);
   --color-pink: #e0398b;
+  --color-offBlack: #161a26;
 }
 
 @theme {
   --font-family-montserrat: var(--font-montserrat), sans-serif;
   --font-family-sans: var(--font-montserrat), sans-serif;
   --color-pink: var(--pink);
+  --color-offBlack: var(--offBlack);
 }
 
 
@@ -152,4 +154,103 @@ section:not(.hero-section) {
 
 .gradient-card {
   background: linear-gradient(135deg, #4e33e1, #e6767b);
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(10px, 0); }
+  75% { transform: translate(5px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
+.cta-btn,
+.cta-btn-red {
+  position: relative;
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #2563eb, #06b6d4, #3b82f6);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-red {
+  background: linear-gradient(90deg, #eb4535, #e6767b);
+}
+
+.cta-btn:before,
+.cta-btn-red:before {
+  content: "";
+  border-radius: inherit;
+  z-index: 0;
+  background: linear-gradient(rgba(255, 255, 255, .4), rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 28%;
+  width: 80%;
+  height: 26%;
+  left: 50%;
+  filter: blur(2px);
+  translate: -50%;
+}
+
+.cta-btn:after,
+.cta-btn-red:after {
+  content: "";
+  border-radius: inherit;
+  z-index: 0;
+  background: linear-gradient(rgba(255, 255, 255, .4), rgba(0, 0, 0, 0));
+  border-radius: 28%;
+  width: 80%;
+  filter: blur(4px);
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50%;
+}
+
+.cta-btn span,
+.cta-btn-red span {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-btn:hover::after,
+.cta-btn-red:hover::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* background: linear-gradient(90deg, rgba(59,130,246,0.5), rgba(6,182,212,0.5));
+  opacity: 0.3; */
+  transition: all 0.3s ease;
+}
+
+
+.custom-moon-image {
+  filter: blur(1px);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1322px) {
+  .custom-moon-image{
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .custom-moon-image{
+    top: 136px;
+  }
 }

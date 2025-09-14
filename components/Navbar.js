@@ -47,16 +47,12 @@ const Navbar = () => {
 
                             <div className='hidden lg:flex '>
                                 <div className="flex items-center gap-4">
-                                    <button className="relative px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium font-montserrat transition-all duration-300 rounded-full border-none outline-none cursor-pointer shadow-lg hover:shadow-blue-400/60 transform hover:scale-105 hover:-translate-y-1 overflow-hidden
-  before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/40 before:via-transparent before:to-white/30 before:opacity-60 hover:before:opacity-80 before:transition-opacity before:duration-300
-  after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-r after:from-transparent after:via-black/10 after:to-transparent after:opacity-30">
-                                        Login
+                                    <button className="cta-btn">
+                                        <span>Login</span>
                                     </button>
 
-                                    <button className="relative px-6 py-2 bg-red-400 hover:bg-red-500 text-white font-medium font-montserrat transition-all duration-300 rounded-full border-none outline-none cursor-pointer shadow-lg hover:shadow-red-400/60 transform hover:scale-105 hover:-translate-y-1 overflow-hidden
-  before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/40 before:via-transparent before:to-white/30 before:opacity-60 hover:before:opacity-80 before:transition-opacity before:duration-300
-  after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-r after:from-transparent after:via-black/10 after:to-transparent after:opacity-30">
-                                        Register
+                                    <button className="cta-btn-red">
+                                        <span>Register</span>
                                     </button>
 
 

@@ -59,7 +59,7 @@ const HeroSection = () => {
       </div>
     </div>
 
-    {/* Second card section  */}
+    {/* second card section  */}
     <div className="flex justify-between items-center w-full max-w-[1000px] h-full mx-auto flex-col md:flex-row gap-8 md:gap-0">
       <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0">
         {/* Image  */}
@@ -118,7 +118,7 @@ const HeroSection = () => {
     </div>
 
    <div className="absolute bottom-0 w-[408px] h-[612px] left-1/2 -translate-x-1/2 -z-10">
-      <Image src="/images/vision.png" alt="codeBg" width={500} height={500} className="w-full h-full object-cover" />
+      <Image src="/images/vision.png" alt="Vision Image" width={500} height={500} className="w-full h-full object-cover" />
   </div>
 
    </div>
