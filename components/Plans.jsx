@@ -32,7 +32,8 @@ const Plans = () => {
                     <div key={idx} className={container.containerClass}>
                         <div className={container.circleClass}></div>
                         {container.plans.map((plan, pIdx) => (
-                            <div key={pIdx} className={plan.wrapperClass}>
+                            <div key={pIdx} className={`${plan.wrapperClass} plan-glow`}
+                                style={{ animationDelay: `${pIdx * 0.7}s` }}>
                                 <p className='font-montserrat text-xs font-medium'>Upto</p>
                                 <h3 className='font-montserrat text-xl font-bold leading-[85%]'>{plan.percentage}</h3>
                                 <p className='font-montserrat font-medium text-xs capitalize leading-[95%]'>{plan.title}</p>
@@ -71,34 +72,44 @@ const Plans = () => {
                             container.plans.map((plan, pIdx) => (
                                 <div
                                     key={`${pIdx}-${plan.title}`}
-                                    className="color-white border border-lightBlue bg-[#3f097b]  rounded-2xl p-6 shadow-lg flex flex-col justify-between"
+                                    className="gradient-card rounded-xl p-6 flex flex-col justify-between hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.2)] hover:cursor-pointer transition-all duration-300"
                                 >
-                                    <div>
-                                        <p className="text-xs text-gray-300">Upto</p>
-                                        <h3 className="text-2xl font-bold text-white">
-                                            {plan.percentage}
-                                        </h3>
-                                        <p className="text-sm text-gray-200 capitalize">
-                                            {plan.title}
-                                        </p>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+                                                <span className="text-white font-bold text-sm">{plan.percentage}</span>
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-montserrat font-medium text-gray-300">Upto</p>
+                                                <h3 className="text-xl font-bold font-montserrat text-white">
+                                                    {plan.percentage}
+                                                </h3>
+                                                <p className="text-sm font-montserrat font-medium text-gray-200 capitalize">
+                                                    {plan.title}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="flex justify-center items-center rounded-full bg-blue-500 p-2">
+                                            <FaCalculator className="text-white text-lg" />
+                                        </div>
                                     </div>
 
-                                    <div className="mt-4">
-                                        <h4 className="text-white text-lg">{plan.min}</h4>
-                                        <h2 className="text-3xl font-bold text-blue-400">
-                                            {plan.mainPercentage}
-                                        </h2>
-                                        <p className="text-gray-300 text-sm">{plan.duration}</p>
-                                        <h3 className="text-white font-semibold mt-2">
-                                            {plan.range} <span>{plan.currency}</span>
-                                        </h3>
-                                    </div>
+                                    <div className="space-y-3">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-gray-300 text-sm font-montserrat">Minimum:</span>
+                                            <span className="text-white font-semibold font-montserrat">{plan.min}</span>
+                                        </div>
 
-                                    <div className="flex justify-between items-center mt-4">
-                                        <p className="text-sm text-blue-400 cursor-pointer">
-                                            Apply Now
-                                        </p>
-                                        <FaCalculator className="text-blue-500 text-2xl" />
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-gray-300 text-sm font-montserrat">Duration:</span>
+                                            <span className="text-white font-semibold font-montserrat">{plan.duration}</span>
+                                        </div>
+
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-gray-300 text-sm font-montserrat">Range:</span>
+                                            <span className="text-white font-semibold font-montserrat">{plan.range} {plan.currency}</span>
+                                        </div>
+
                                     </div>
                                 </div>
                             ))
@@ -106,25 +117,19 @@ const Plans = () => {
                     </div>
                 )}
 
-
                 {/* container plan 7 */}
                 {
                     !isMobile && (
-                        <div className='absolute w-[250px] h-[250px] bg-blue-200/20 backdrop-blur-md  rounded-full md:top-[575px] lg:top-[534px] flex justify-center items-start z-20 shadow-lg'>
-                            {/* <div className='absolute w-full h-full inset-0 !rounded-full border-4 rotating-circle'></div> */}
+                        <div className='absolute w-[250px] h-[250px] bg-blue-200/20 backdrop-blur-md rounded-full md:top-[575px] lg:top-[534px] flex justify-center items-start z-20 shadow-lg supply-glow'>
                             <div className='absolute flex justify-center items-start p-4 md:pt-8 lg:pt-12 flex-col'>
                                 <p className='font-montserrat font-bold text-base text-left'>Total</p>
                                 <h3 className='font-montserrat font-bold md:text-4xl lg:text-6xl leading-[95%]'>100M</h3>
                                 <p className='font-montserrat font-bold text-base w-full text-right'>supply</p>
                             </div>
-
-
                         </div>
                     )
                 }
             </div>
-
-
         </section>
     )
 }
