@@ -65,6 +65,16 @@ body {
 
 /* HERO SECTION STYLES */
 
+@keyframes pulse-icon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.animate-icon {
+  animation: pulse-icon 2s infinite ease-in-out;
+}
+
+
 .hero-section {
   position: relative;
   background-color: #0f1419; 
@@ -120,14 +130,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
-/* .plan-spear{
-  background: linear-gradient(180deg, var(--color-violet), var(--color-purple));
-  transition: all 0.3s ease;
-  z-index: 50;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-} */
 
 .plan-spear {
   background: linear-gradient(180deg, var(--color-violet), var(--color-purple));

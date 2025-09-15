@@ -12,6 +12,7 @@ import { GoPersonFill } from "react-icons/go";
 import Image from "next/image";
 
 const HeroSection = () => {
+  
   return (
     <section className="hero-section min-h-screen relative overflow-hidden">
        
@@ -32,9 +33,9 @@ const HeroSection = () => {
    <div className="relative max-w-7xl h-full px-3 z-30 gap-8 md:gap-16 flex flex-col py-8 md:py-0 md:pb-10">
     {/* First cards section  */}
     <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto flex-col md:flex-row gap-8 md:gap-0">
-      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0">
+      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0 hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.6)] hover:cursor-pointer transition-all duration-300">
         {/* Image  */}
-        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center animate-icon">
         <FaRocket  className="text-white text-2xl" />
         </div>
         <div className="flex flex-col justify-center items-start">
@@ -45,14 +46,14 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 ml-[100px] md:ml-0">
+      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 ml-[100px] md:ml-0 hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.6)] hover:cursor-pointer transition-all duration-300">
         <div className="flex flex-col justify-center items-end">
           <h6 className="text-sm font-montserrat font-bold">
             Online Visitors
           </h6>
           <h2 className="text-4xl font-bold font-montserrat">6113</h2>
         </div>
-        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center animate-icon">
         <BsPeopleFill  className="text-white text-2xl" />
         </div>
         
@@ -61,9 +62,9 @@ const HeroSection = () => {
 
     {/* second card section  */}
     <div className="flex justify-between items-center w-full max-w-[1000px] h-full mx-auto flex-col md:flex-row gap-8 md:gap-0">
-      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0">
+      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0 hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.6)] hover:cursor-pointer transition-all duration-300">
         {/* Image  */}
-        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center animate-icon">
         <BiSolidShoppingBag  className="text-white text-2xl" />
         </div>
         <div className="flex flex-col justify-center items-start">
@@ -74,14 +75,14 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 ml-[100px] md:ml-0">
+      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 ml-[100px] md:ml-0 hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.6)] hover:cursor-pointer transition-all duration-300">
         <div className="flex flex-col justify-center items-end">
           <h6 className="text-sm font-montserrat font-bold">
             Total Withdrawals
           </h6>
           <h2 className="text-4xl font-bold font-montserrat">$0.00</h2>
         </div>
-        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center animate-icon">
         <BiMoneyWithdraw  className="text-white text-2xl" />
         </div>
         
@@ -90,9 +91,9 @@ const HeroSection = () => {
 
     {/*Third card section   */}
     <div className="flex justify-between items-center w-full max-w-[800px] h-full mx-auto flex-col md:flex-row gap-8 md:gap-0">
-      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0">
+      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 mr-[100px] md:mr-0 hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.6)] hover:cursor-pointer transition-all duration-300">
         {/* Image  */}
-        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center animate-icon">
         <FaCalendarAlt  className="text-white text-2xl" />
         </div>
         <div className="flex flex-col justify-center items-start">
@@ -103,14 +104,14 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 ml-[100px] md:ml-0">
+      <div className="w-max gradient-card rounded-xl flex justify-center items-center gap-2 p-2 ml-[100px] md:ml-0 hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.6)] hover:cursor-pointer transition-all duration-300">
         <div className="flex flex-col justify-center items-end">
           <h6 className="text-sm font-montserrat font-bold">
             Visitors online
           </h6>
           <h2 className="text-4xl font-bold font-montserrat">2</h2>
         </div>
-        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center">
+        <div className="w-12 h-12 bg-pink rounded-full border border-white flex justify-center items-center animate-icon">
         <GoPersonFill  className="text-white text-2xl" />
         </div>
         

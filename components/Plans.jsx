@@ -71,7 +71,7 @@ const Plans = () => {
                             container.plans.map((plan, pIdx) => (
                                 <div
                                     key={`${pIdx}-${plan.title}`}
-                                    className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg flex flex-col justify-between"
+                                    className="color-white border border-lightBlue bg-[#3f097b]  rounded-2xl p-6 shadow-lg flex flex-col justify-between"
                                 >
                                     <div>
                                         <p className="text-xs text-gray-300">Upto</p>
