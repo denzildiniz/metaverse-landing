@@ -126,10 +126,10 @@ const Navbar = () => {
 
                         {/* Navigation Links */}
                         <div className="space-y-6">
-                            <button className="w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium font-montserrat transition-all duration-300 rounded-[30px] border-none outline-none cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-blue-500/40 transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 text-center">
+                            <button className="cta-btn w-full">
                                 Login
                             </button>
-                            <button className="w-full px-6 py-3 bg-red-400 hover:bg-red-500 text-white font-medium font-montserrat transition-all duration-300 rounded-[30px] border-none outline-none cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-red-400/40 transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 text-center">
+                            <button className="cta-btn-red w-full">
                                 Register
                             </button>
                         </div>

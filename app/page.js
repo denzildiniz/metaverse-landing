@@ -22,7 +22,7 @@ export default function Home() {
       <About />
 
       {/* Animated Metal Circles Background */}
-      {/* <div className="animated-metalCircel-container z-[100]">
+      <div className="animated-metalCircel-container z-[100]">
         <Image
           src="/images/silver.png"
           alt="Animated Metal Circle 1"
@@ -130,7 +130,7 @@ export default function Home() {
           height={30}
           className="animated-metalItem-11"
         />
-      </div> */}
+      </div>
     </>
   );
 }
