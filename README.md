@@ -12,6 +12,8 @@ git clone https://github.com/denzildiniz/metaverse-landing.git
 
 # Navigate to the project directory
 cd metaverse-landing
+
+use the main branch
 ```
 
 ### 2. Install Dependencies
