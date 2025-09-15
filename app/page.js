@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Feature from "@/components/Feature";
 import About from "@/components/About";
+import Plans from "@/components/Plans";
 
 export default function Home() {
   return (
@@ -13,12 +14,15 @@ export default function Home() {
       
       {/* Features Section */}
       <Feature />
+
+       {/* Plans Section */}
+       <Plans />
       
       {/* About Section */}
       <About />
-      
+
       {/* Animated Metal Circles Background */}
-      <div className="animated-metalCircel-container z-[100]">
+      {/* <div className="animated-metalCircel-container z-[100]">
         <Image
           src="/images/silver.png"
           alt="Animated Metal Circle 1"
@@ -126,7 +130,7 @@ export default function Home() {
           height={30}
           className="animated-metalItem-11"
         />
-      </div>
+      </div> */}
     </>
   );
 }
